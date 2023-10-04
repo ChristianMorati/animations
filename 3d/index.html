@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .three-d-element {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* transform: translate(-150%, -50%); */
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: diagonal 2s ease-in-out;
+      }
+
+      @keyframes diagonal {
+        25% {
+          transform: translateY(-100px) rotate(+30deg);
+        }
+        50% {
+          transform: translateY(-100px) translateX(100px) rotate(90deg);
+        }
+        75% {
+          transform: translateX(100px) rotate(+30deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="three-d-element"></div>
+    <div class="three-d-element">
+      <div class="cube">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>
